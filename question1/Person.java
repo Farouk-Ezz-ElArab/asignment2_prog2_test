@@ -61,11 +61,30 @@ public class Person {
     }
 
     private void validateState() {
-        if (!isWorking){
+        if (!isWorking) {
             this.salary = 0;
         } else if (this.salary <= 0) {
             this.salary = DEFAULT_SALARY;
         }
     }
 
+    public static void main(String[] args) {
+        Person person1 = new Person("Alaa");
+        System.out.println("Person 1: " + person1.getName() + ", Salary: " + person1.getSalary() + ", Is Working: "
+                + person1.getIsWorking() + ", Net Income: " + person1.netIncome());
+
+        Person person2 = new Person("mari", 2000, true, 500);
+        System.out.println("Person 2: " + person2.getName() + ", Salary: " + person2.getSalary() + ", Is Working: "
+                + person2.getIsWorking() + ", Net Income: " + person2.netIncome());
+
+        person1.setIsWorking(true);
+        //person1.setSalary(1500);
+        person1.setMonthlyExpenses(300);
+        System.out.println("Person 1 (after updates): " + person1.getName() + ", Salary: " + person1.getSalary()
+                + ", Is Working: " + person1.getIsWorking() + ", Net Income: " + person1.netIncome());
+
+        person2.setIsWorking(false);
+        System.out.println("Person 2 (after updates): " + person2.getName() + ", Salary: " + person2.getSalary()
+                + ", Is Working: " + person2.getIsWorking() + ", Net Income: " + person2.netIncome());
+    }
 }
