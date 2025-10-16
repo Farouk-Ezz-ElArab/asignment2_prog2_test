@@ -30,8 +30,8 @@ public class BankAccount {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
-            System.out.println("Deposit Amount: " + amount + " EGP");
-            System.out.println("New Balance: " + balance + " EGP\n");
+            System.out.println("Deposit Amount: " + amount + " $");
+            System.out.println("New Balance: " + balance + " $\n");
         } else {
             System.out.println("Deposit amount must be positive.");
         }
@@ -44,18 +44,18 @@ public class BankAccount {
             System.out.println("Insufficient funds. Withdrawal failed.");
         } else {
             balance -= amount;
-            System.out.println("Withdrawal Amount: " + amount + " EGP");
-            System.out.println("New Balance: " + balance + " EGP\n");
+            System.out.println("Withdrawal Amount: " + amount + " $");
+            System.out.println("New Balance: " + balance + " $\n");
         }
     }
 
     public void checkBalance() {
-        System.out.println("Current Balance: " + balance + " EGP\n");
+        System.out.println("Current Balance: " + balance + " $\n");
     }
-    public void displayAccountDetails() {
+    public void displayDetails() {
         System.out.println("Account Details:");
         System.out.println("Account Number: " + accountNumber);
         System.out.println("Account Holder Name: " + accountHolderName);
-        System.out.println("Current Balance: " + balance + " EGP\n");
+        System.out.println("Current Balance: " + balance + " $\n");
     }
 }

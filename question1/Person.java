@@ -57,7 +57,8 @@ public class Person {
     }
 
     public double netIncome() {
-        return salary - monthlyExpenses;
+        double netIncome = salary - monthlyExpenses;
+        return netIncome  >= 0 ? netIncome : 0;
     }
 
     private void validateState() {
@@ -78,7 +79,7 @@ public class Person {
                 + person2.getIsWorking() + ", Net Income: " + person2.netIncome());
 
         person1.setIsWorking(true);
-        //person1.setSalary(1500);
+        person1.setSalary(1500);
         person1.setMonthlyExpenses(300);
         System.out.println("Person 1 (after updates): " + person1.getName() + ", Salary: " + person1.getSalary()
                 + ", Is Working: " + person1.getIsWorking() + ", Net Income: " + person1.netIncome());

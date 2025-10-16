@@ -4,7 +4,7 @@ public class TestBankAccount {
         BankAccount account = new BankAccount("123456", "John Doe");
 
         System.out.println("Account Creation");
-        account.displayAccountDetails();
+        account.displayDetails();
 
         System.out.println("After Deposit");
         account.deposit(1000);
