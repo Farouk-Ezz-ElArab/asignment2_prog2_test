@@ -71,6 +71,8 @@ public class Person {
 
     public static void main(String[] args) {
         System.out.println("Testing Person class:");
+        System.out.println("---------------------");
+        System.out.println("Default salary for working person: " + DEFAULT_SALARY);
         Person person1 = new Person("Alaa");
         System.out.println("Person 1: " + person1.getName() + ", Salary: " + person1.getSalary() + ", Is Working: "
                 + person1.getIsWorking() + ", Net Income: " + person1.netIncome());
