@@ -1,7 +1,6 @@
 package question2;
 public class TestBankAccount {
     public static void main(String[] args) {
-        System.out.println("Bank Account Test Cases");
         BankAccount account = new BankAccount("123456", "John Doe");
 
         System.out.println("Account Creation");
